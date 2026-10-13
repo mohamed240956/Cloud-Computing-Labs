@@ -1,4 +1,4 @@
-# Logs
+node_modules/# Logs
 logs
 *.log
 npm-debug.log*
@@ -147,3 +147,6 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+Thumbs.db
+.DS_Store
