@@ -1,0 +1,275 @@
+{
+  "info": {
+    "_postman_id": "ba5ee993-1a40-45b7-8bdf-4a1c09147566",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59077583",
+    "_collection_link": "https://go.postman.co/collection/59077583-ba5ee993-1a40-45b7-8bdf-4a1c09147566?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "View Issue",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create issue",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n \"title\": \"Printer unavailable\",\r\n \"description\": \"The shared printer is not responding.\",\r\n \"priority\": \"Medium\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/issues",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Change issue status",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n \"status\": \"Resolved\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/issues/{{issueId}}/status",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues",
+            "{{issueId}}",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid Create Issue",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n \"title\": \"\",\r\n \"description\": \"Missing valid title\",\r\n \"priority\": \"Urgent\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "POST {{baseUrl}}/api/issues",
+          "host": [
+            "POST {{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Unknown Issue",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n \"status\": \"Resolved\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/issues/does-not-exist/status",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues",
+            "does-not-exist",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Unknown Route",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/fake-url",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "fake-url"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Invalid Status Change",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n \"status\": \"Deleted\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/issues/<issue-id>/status",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues",
+            "<issue-id>",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Issue with Server-Owned Fields",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n \"id\": \"HACKED-1\",\r\n \"title\": \"Projector flickering\",\r\n \"description\": \"The projector in room B204 flickers.\",\r\n \"priority\": \"Low\",\r\n \"status\": \"Resolved\",\r\n \"createdAt\": \"2000-01-01T00:00:00.000Z\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/issues",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Issue Without JSON",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/issues",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Issue with Malformed JSON",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n \"title\": \"Printer unavailable\",\r\n \"description\": \"The shared printer is not responding.\",\r\n \"priority\": \"Medium\",\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/issues",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "issues"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Issues When None Exist",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "issueId",
+      "value": "ISS-101",
+      "type": "default"
+    }
+  ]
+}

@@ -4,7 +4,55 @@
     "title": "Unable to access Wi-Fi",
     "description": "Connection fails in the teaching lab.",
     "priority": "High",
-    "status": "Open",
+    "status": "Resolved",
     "createdAt": "2026-09-01T09:00:00.000Z"
+  },
+  {
+    "id": "127d7acf-4516-4fa4-98be-3602a96bfd56",
+    "title": "Printer unavailable",
+    "description": "The shared printer is not responding.",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-10-20T06:33:03.263Z"
+  },
+  {
+    "id": "0f7cc1f5-5fe3-4fc1-ad61-c4c43fc8d5bc",
+    "title": "Valid Title",
+    "description": "Valid Description",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-10-20T06:34:02.826Z"
+  },
+  {
+    "id": "5574c69c-82f4-4d2c-8692-a5e5227e7cf6",
+    "title": "Valid Title",
+    "description": "Valid Description",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-10-20T06:34:05.551Z"
+  },
+  {
+    "id": "7ca59571-8139-4886-a23d-532133633174",
+    "title": "Projector flickering",
+    "description": "The projector in room B204 flickers.",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-10-20T06:43:53.681Z"
+  },
+  {
+    "id": "9dd1d7d1-1fe5-4f2c-a47c-445456cdb19d",
+    "title": "Printer unavailable",
+    "description": "The shared printer is not responding.",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-10-20T06:46:12.397Z"
+  },
+  {
+    "id": "4177315f-5edf-405a-81b1-980511aa2030",
+    "title": "Printer unavailable",
+    "description": "The shared printer is not responding.",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-10-20T06:51:08.164Z"
   }
 ]
